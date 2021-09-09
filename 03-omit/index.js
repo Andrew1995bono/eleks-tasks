@@ -11,7 +11,7 @@ export const omit = (obj, ...fields) => {
     }
     for (let key in obj) {
         for (let element of fields) {
-            if (key.includes(element) == false) {
+            if (key !== element) {
                 newObj[key] = obj[key];
             } else {
                 newObj = {};
