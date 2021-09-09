@@ -4,9 +4,8 @@
  * @returns {string} - returns the new string
  */
 export const repeatString = (str) => {
-    let newString = "";
-    for (let i = 0; i < str.length; i++) {
-        newString += str[i].repeat([i + 1]) + '-';
-    }
-    return newString;
+    let a = str.split("");
+    let b = a.map((ch, i) => (ch = ch.toLowerCase().repeat(i + 1)) && ch.charAt(0).toUpperCase() + ch.slice(1));
+    let c = b.join('-');
+    return c;
 }
